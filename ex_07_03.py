@@ -16,4 +16,4 @@ for line in fhandle:
     if line.startswith('subject:'):
         count = count + 1
 
-print("There were %d subject lines in %s" (%count, %fname))
+print('There were %d subject lines in %s' %(count, fname))
