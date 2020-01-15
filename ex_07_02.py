@@ -6,7 +6,7 @@ except:
     print('File name is not recognized')
     exit()
 count = 0
-sum_conf = 0
+s_conf = 0 #avoid using 'sum' as a variable name
 for line in fhandle:
     line = line.rstrip()
     line = line.casefold()
@@ -17,8 +17,8 @@ for line in fhandle:
         conf_no = line[sbegin:]
         # print(conf_no)
         conf_no = float(conf_no)
-        sum_conf = sum_conf + conf_no
+        s_conf = s_conf + conf_no
         # print(count)
         # print(sum_conf)
-avg = sum_conf/count
+avg = s_conf/count
 print('Confidence email spam average:', avg)
