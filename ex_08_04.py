@@ -4,7 +4,8 @@ try:
     fh = open(fname)
 except:
     print('Cannot find a file with this name', fname)
-
+    exit()
+    
 w_list = []
 for line in fh:
     words = line.split()
