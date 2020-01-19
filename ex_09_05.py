@@ -4,9 +4,9 @@ fname = input('Enter file name: ')
 try:
     fh = open(fname)
 except:
-    print('File not found', fname)
+    print('File not found:', fname)
+
 counts = dict()
-days = list()
 for line in fh:
     words = line.split()
     # print('Debug', words)
