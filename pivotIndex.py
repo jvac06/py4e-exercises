@@ -15,4 +15,4 @@ def pivotIndex(nums: List[int]) -> int:  #add self as parameter
     return -1
 
 nums = [1, 7, 3, 6, 5, 6]
-pivotIndex(nums)
+print(pivotIndex(nums))
