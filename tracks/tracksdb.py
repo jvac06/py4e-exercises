@@ -1,7 +1,7 @@
 import xml.etree.ElementTree as ET
 import sqlite3
 
-conn = sqlite3.connect('tracksdb.sqlite')
+conn = sqlite3.connect('trackdb.sqlite')
 cur = conn.cursor()
 
 # Create new tables
@@ -38,7 +38,7 @@ CREATE TABLE Track (
 
 fname = input('Enter file name: ')
 if len(fname) < 1:
-    fname = 'Library.xml'
+    fname = 'tracks/Library.xml'
 
 # Create definition to parse XML for track info
 def lookup(d, key):
