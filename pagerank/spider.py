@@ -11,7 +11,7 @@ ctx = ssl.create_default_context()
 ctx.check_hostname = False
 ctx.verify_mode = ssl.CERT_NONE
 
-conn = sqlite3.connect('spider.sqlite')
+conn = sqlite3.connect('drchuck.sqlite')
 cur = conn.cursor()
 
 cur.execute('''CREATE TABLE IF NOT EXISTS Pages
@@ -30,7 +30,7 @@ if row is not None:
     print("Restarting existing crawl.  Remove spider.sqlite to start a fresh crawl.")
 else :
     starturl = input('Enter web url or enter: ')
-    if ( len(starturl) < 1 ) : starturl = 'http://www.wikipedia.org/'
+    if ( len(starturl) < 1 ) : starturl = 'http://www.wikipedia.org/wiki'
     if ( starturl.endswith('/') ) : starturl = starturl[:-1]
     web = starturl
     if ( starturl.endswith('.htm') or starturl.endswith('.html') ) :
